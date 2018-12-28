@@ -30,29 +30,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <plugin>
-                <groupId>com.spotify</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <version>0.4.12</version>
-                <configuration>
-                    <imageName>172.16.161.123:5000/eureka:${project.version}</imageName>
-                    <imageTags>
-                        <imageTag>latest</imageTag>
-                    </imageTags>
-                    <pushImageTag>true</pushImageTag>
-                    <baseImage>java</baseImage>
-                    <entryPoint>["java", "-jar", "/${project.build.finalName}.jar", "--spring.profiles.active=k8s"]</entryPoint>
-                    <!--<pushImage>true</pushImage>-->
-                    <forceTags>true</forceTags>
-                    <resources>
-                        <resource>
-                            <targetPath>/</targetPath>
-                            <directory>${project.build.directory}</directory>
-                            <include>${project.build.finalName}.jar</include>
-                        </resource>
-                    </resources>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 

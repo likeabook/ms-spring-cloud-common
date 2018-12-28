@@ -10,6 +10,7 @@
     <modules>
         <module>ms-spring-cloud-root</module>
         <module>ms-eureka</module>
+        <module>ms-admin</module>
         <module>ms-config</module>
         <module>ms-zuul</module>
     </modules>
