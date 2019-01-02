@@ -11,6 +11,11 @@
     <url>http://maven.apache.org</url>
     <description>spring-cloud项目的跟，所有微服务的parent，spring-boot和spring-cloud的版本配置</description>
 
+
+    <properties>
+        <spring-cloud.version>Greenwich.RC2</spring-cloud.version>
+    </properties>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -39,7 +44,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Greenwich.M1</version>
+                <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
